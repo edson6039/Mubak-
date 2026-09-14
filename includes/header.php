@@ -13,11 +13,18 @@
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="<?=BASE_URL?>index.php">Home</a>
-        <a href="<?=BASE_URL?>src/pages/about.php">About</a>
-        <a href="<?=BASE_URL?>src/pages/contact.php">Contact</a>
-    </div>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="<?=BASE_URL?>index.php" class="brand" aria-label="Mubak! home">
+                <img src="<?=BASE_URL?>src/img/logo.svg" alt="Mubak! logo" class="brand-logo">
+                <span class="brand-text">Mubak!</span>
+            </a>
 
-</body>
-</html>
+            <nav class="main-nav" aria-label="Navegação principal">
+                <a href="<?=BASE_URL?>index.php">Home</a>
+                <a href="<?=BASE_URL?>src/pages/about.php">Sobre</a>
+                <a href="<?=BASE_URL?>src/pages/contact.php">Contato</a>
+            </nav>
+        </div>
+    </header>
+
