@@ -9,8 +9,8 @@
         </div>
 
         <div class="footer-contact">
-            <a href="mailto:contato@mubak.com">contato@mubak.com</a>
-            <a href="tel:+551100000000">+55 (11) 0000-0000</a>
+            <a href="mailto:mubakeiros@hotmail.com">mubakeiros@hotmail.com</a>
+            <a href="tel:+5575970707070">+55 (75) 97070-7070</a>
         </div>
     </div>
 </footer>

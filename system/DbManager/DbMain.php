@@ -1,5 +1,5 @@
 <?php
 
 // Classes principais
-require 'DbManager.php';
-require 'DbManagerActions.php';
+require_once __DIR__ . '/DbManager.php';
+require_once __DIR__ . '/DbManagerActions.php';

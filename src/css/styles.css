@@ -47,6 +47,306 @@ a {
     width: 100%;
 }
 
+/* PRODUCTS */
+.product-container {
+    width: min(1200px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 3.5rem 0 4rem;
+}
+
+.product-detail-container {
+    width: 100%;
+    padding: 3.5rem clamp(1rem, 5vw, 5rem) 5rem;
+}
+
+.product-detail-container > h1 {
+    width: min(1400px, 100%);
+    margin: 0 auto 2rem;
+    color: var(--primary-blue-dark);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.1;
+    text-align: center;
+}
+
+.product-detail-container > h1::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 4px;
+    margin: 0.85rem auto 0;
+    border-radius: 999px;
+    background: var(--primary-blue);
+}
+
+.product-detail-card {
+    width: min(1400px, 100%);
+    min-height: 520px;
+    display: grid;
+    grid-template-columns: minmax(300px, 42%) 1fr;
+    margin: 0 auto;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #d7e8f4;
+    border-radius: 14px;
+    box-shadow: 0 14px 34px rgba(29, 78, 137, 0.12);
+}
+
+.product-detail-media {
+    min-height: 520px;
+    background: #dceefa;
+}
+
+.product-detail-media img {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    display: block;
+    object-fit: cover;
+}
+
+.product-detail-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: clamp(2rem, 5vw, 5rem);
+}
+
+.product-detail-content h2 {
+    color: var(--primary-blue-dark);
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+}
+
+.product-detail-content p {
+    max-width: 680px;
+    color: #52718b;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.product-detail-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+.product-detail-actions button {
+    min-width: 125px;
+    padding: 0.8rem 1.25rem;
+    border: 0;
+    border-radius: 8px;
+    color: var(--white);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.product-detail-actions button:hover {
+    filter: brightness(0.92);
+    transform: translateY(-2px);
+}
+
+.product-action-buy {
+    background: #238b63;
+}
+
+.product-action-edit {
+    background: #e4d505;
+}
+
+.product-action-delete {
+    background: #c64b55;
+}
+
+.product-container > h2 {
+    color: var(--primary-blue-dark);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.product-container > h2::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 4px;
+    margin: 0.85rem auto 0;
+    border-radius: 999px;
+    background: var(--primary-blue);
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    align-items: stretch;
+    gap: 1.25rem;
+}
+
+.product-container:has(.product-card) {
+    display: grid;
+}
+
+.product-container > h2 {
+    grid-column: 1 / -1;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 190px;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #d7e8f4;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(29, 78, 137, 0.09);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.product-card:hover {
+    border-color: var(--primary-blue);
+    box-shadow: 0 14px 30px rgba(29, 78, 137, 0.16);
+    transform: translateY(-4px);
+    cursor: pointer;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.25rem;
+}
+
+.product-card h3 {
+    color: var(--primary-blue-dark);
+    font-size: 1.2rem;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+}
+
+.product-card p {
+    color: #52718b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.editable-field {
+    position: relative;
+    padding: 8px;
+    margin: -8px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: default;
+    transition: all 0.2s ease;
+}
+
+
+/* Quando passa o mouse */
+.editable-field:hover {
+    background: #f7f7f7;
+    border-color: #e2e2e2;
+    cursor: pointer;
+}
+
+
+/* Texto "Duplo clique para editar" */
+.edit-hint {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+
+    font-size: 11px;
+    color: #777;
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+
+    pointer-events: none;
+}
+
+
+/* Mostra a dica ao passar o mouse */
+.editable-field:hover .edit-hint {
+    opacity: 1;
+}
+
+
+/* Campo que está sendo editado */
+.editable-field.editing {
+    background: #fff;
+    border: 1px solid #999;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+
+    cursor: text;
+}
+
+
+/* Remove a dica enquanto edita */
+.editable-field.editing .edit-hint {
+    display: none;
+}
+
+
+/* Input */
+.editable-field input,
+.editable-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    border: 1px solid #aaa;
+    border-radius: 5px;
+
+    padding: 8px;
+
+    font-family: inherit;
+    font-size: inherit;
+
+    outline: none;
+}
+
+
+.editable-field input:focus,
+.editable-field textarea:focus {
+    border-color: #555;
+}
+
+
+/* Área de descrição */
+.editable-field textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+/* Pequena indicação de salvamento */
+.edit-saving {
+    font-size: 11px;
+    color: #777;
+    margin-left: 8px;
+}
+
+
+/* Sucesso */
+.edit-success {
+    font-size: 11px;
+    color: #198754;
+    margin-left: 8px;
+}
+
+
+/* Erro */
+.edit-error {
+    font-size: 11px;
+    color: #dc3545;
+    margin-left: 8px;
+}
+
 /* HEADER */
 .site-header {
     background: linear-gradient(180deg, var(--primary-blue-dark) 0%, #183f6d 100%);
@@ -151,6 +451,37 @@ a {
 }
 
 @media (max-width: 768px) {
+    .product-container {
+        padding: 2.5rem 0 3rem;
+    }
+
+    .product-detail-container {
+        padding: 2.5rem 1rem 3rem;
+    }
+
+    .product-detail-card {
+        display: block;
+        min-height: 0;
+    }
+
+    .product-detail-media,
+    .product-detail-media img {
+        min-height: 280px;
+        height: 280px;
+    }
+
+    .product-detail-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .product-detail-actions {
+        width: 100%;
+    }
+
+    .product-detail-actions button {
+        flex: 1;
+    }
+
     .header-inner {
         flex-direction: column;
         justify-content: center;

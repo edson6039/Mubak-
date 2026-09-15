@@ -22,6 +22,7 @@
 
             <nav class="main-nav" aria-label="Navegação principal">
                 <a href="<?=BASE_URL?>index.php">Home</a>
+                <a href="<?=BASE_URL?>system/produtos/index.php">Produtos</a>
                 <a href="<?=BASE_URL?>src/pages/about.php">Sobre</a>
                 <a href="<?=BASE_URL?>src/pages/contact.php">Contato</a>
             </nav>
