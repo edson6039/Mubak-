@@ -47,6 +47,38 @@ a {
     width: 100%;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.2rem;
+    border: 0;
+    border-radius: 8px;
+    color: rgb(244, 244, 248);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    background-color: #1d4e89;
+}
+
+
+
 /* PRODUCTS */
 .product-container {
     width: min(1200px, calc(100% - 2rem));

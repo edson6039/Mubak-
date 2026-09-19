@@ -1,6 +1,6 @@
 <?php
 
-define('BASE_URL', 'http://localhost/Mubak!/'); 
+define('BASE_URL', 'http://localhost/Mubak-/'); 
 
 // Conectando ao gerenciador do banco de dados
 require_once __DIR__ . '/DbManager/DbMain.php';

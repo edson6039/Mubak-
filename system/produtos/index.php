@@ -9,13 +9,17 @@ $produtos = search('produto', complement:
 
 <div class="product-container">
     <h2>Produtos</h2>
-<?php foreach ($produtos as $produto) { ?>
-    <div class="product-card" onclick="window.location.href='show.php?id=<?php echo $produto['id_produto']; ?>'">
-        <h3><?php echo $produto['nome_produto']; ?></h3>
-        <p><?php echo $produto['descricao_produto']; ?></p>
-        <img src="<?php echo $produto['imagem_produto']; ?>" alt="<?php echo $produto['nome_produto']; ?>">
-    </div>
-<?php } ?>
+    <?php foreach ($produtos as $produto) { ?>
+        <div class="product-card" onclick="window.location.href='show.php?id=<?php echo $produto['id_produto']; ?>'">
+            <h3><?php echo $produto['nome_produto']; ?></h3>
+            <p><?php echo $produto['descricao_produto']; ?></p>
+            <img src="<?php echo BASE_URL . $produto['imagem_produto']; ?>" alt="<?php echo $produto['nome_produto']; ?>">
+        </div>
+    <?php } ?>
+</div>
+
+<div class="register-button flex justify-content-center mt-4">
+    <a class="btn btn-primary" href="register.php">Cadastrar Produto</a>
 </div>
 
 
